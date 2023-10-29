@@ -1,0 +1,70 @@
+{
+  "_fv": 47,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_displaycombo",
+          "text": {
+            "fixedValue": "DisplayCombo",
+            "name": "DisplayCombo"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 330,
+          "y": 206
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dragon.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDragon"
+          },
+          "x": 33,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "snake.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplaySnake"
+          },
+          "x": 33,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ox.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayOx"
+          },
+          "x": 33,
+          "y": 170
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
