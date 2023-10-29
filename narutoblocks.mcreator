@@ -18,6 +18,7 @@
     {
       "name": "TrainingLog",
       "type": "livingentity",
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "training_log",
@@ -46,6 +47,7 @@
     {
       "name": "TrainingLogHit",
       "type": "procedure",
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "training_log_hit",
@@ -95,6 +97,183 @@
         "files": []
       },
       "path": "~/Creative Tab"
+    },
+    {
+      "name": "FireBallJutsuRangedWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_ball_jutsu_ranged_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/FireBallJutsuRangedWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedure"
+    },
+    {
+      "name": "FireBallJutsuRangedProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_ball_jutsu_ranged_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/FireBallJutsuRangedProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ranged/Procedure"
+    },
+    {
+      "name": "FireBallJutsuRanged",
+      "type": "rangeditem",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_ball_jutsu_ranged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/item/FireBallJutsuRangedItem.java",
+          "src/main/java/net/mcreator/narutoblocks/entity/FireBallJutsuRangedEntity.java",
+          "src/main/resources/assets/narutoblocks/models/item/fire_ball_jutsu_ranged.json"
+        ]
+      },
+      "path": "~/Ranged"
+    },
+    {
+      "name": "JutsuScrollDrop",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jutsu_scroll_drop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/JutsuScrollDropProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "JutsuMasterySet",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jutsu_mastery_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/JutsuMasterySetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Command/Procedure"
+    },
+    {
+      "name": "SetJutsuMastery",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_jutsu_mastery",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/command/SetJutsuMasteryCommand.java"
+        ]
+      },
+      "path": "~/Command"
+    },
+    {
+      "name": "StatTick",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/StatTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -133,11 +312,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "JutsuMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "TaijutsuStatGain",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.narutoblocks.fire_ball_jutsu_ranged": "Fire Ball Jutsu Ranged",
       "entity.narutoblocks.training_log": "Training Log",
       "item.narutoblocks.testing": "Testing",
       "itemGroup.tabitems": "Items",
@@ -183,7 +375,12 @@
       },
       {
         "name": "Ranged",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Jutsu",
@@ -207,7 +404,12 @@
       },
       {
         "name": "Command",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Biome",
@@ -249,6 +451,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.narutoblocks",
     "lockBaseModFiles": false
   },

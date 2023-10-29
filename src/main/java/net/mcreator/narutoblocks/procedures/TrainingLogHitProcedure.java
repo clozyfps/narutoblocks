@@ -61,6 +61,13 @@ public class TrainingLogHitProcedure {
 						capability.syncPlayerVariables(immediatesourceentity);
 					});
 				}
+				{
+					double _setval = (immediatesourceentity.getCapability(NarutoblocksModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new NarutoblocksModVariables.PlayerVariables())).TaijutsuStatGain + 1;
+					immediatesourceentity.getCapability(NarutoblocksModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TaijutsuStatGain = _setval;
+						capability.syncPlayerVariables(immediatesourceentity);
+					});
+				}
 				immediatesourceentity.getPersistentData().putDouble("taijutsugain", 0);
 				if (immediatesourceentity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("Taijutsu Increased"), false);

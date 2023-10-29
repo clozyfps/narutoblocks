@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "narutoblocks:custom/scroll_b",
   "textures": {
-    "layer0": "narutoblocks:items/a2i22e_layer_2"
+    "0": "narutoblocks:blocks/scrollbtexture",
+    "particle": "narutoblocks:items/a2i22e_layer_2"
   }
 }

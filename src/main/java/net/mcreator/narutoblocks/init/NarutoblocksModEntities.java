@@ -17,11 +17,14 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.narutoblocks.entity.TrainingLogEntity;
+import net.mcreator.narutoblocks.entity.FireBallJutsuRangedEntity;
 import net.mcreator.narutoblocks.NarutoblocksMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class NarutoblocksModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, NarutoblocksMod.MODID);
+	public static final RegistryObject<EntityType<FireBallJutsuRangedEntity>> FIRE_BALL_JUTSU_RANGED = register("projectile_fire_ball_jutsu_ranged", EntityType.Builder.<FireBallJutsuRangedEntity>of(FireBallJutsuRangedEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(FireBallJutsuRangedEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TrainingLogEntity>> TRAINING_LOG = register("training_log", EntityType.Builder.<TrainingLogEntity>of(TrainingLogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrainingLogEntity::new).fireImmune().sized(0.6f, 1.8f));
 

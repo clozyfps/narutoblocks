@@ -2,9 +2,9 @@
   "_fv": 47,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "a2i22e_layer_2",
-    "customModelName": "Normal",
+    "customModelName": "scroll_b:default",
     "customProperties": {},
     "states": [],
     "name": "Jutsu Scroll",

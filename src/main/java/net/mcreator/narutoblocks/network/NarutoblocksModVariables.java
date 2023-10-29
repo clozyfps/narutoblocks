@@ -72,6 +72,8 @@ public class NarutoblocksModVariables {
 			clone.Chakra = original.Chakra;
 			clone.ChakraMax = original.ChakraMax;
 			clone.ChakraGainRate = original.ChakraGainRate;
+			clone.JutsuMastery = original.JutsuMastery;
+			clone.TaijutsuStatGain = original.TaijutsuStatGain;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -114,6 +116,8 @@ public class NarutoblocksModVariables {
 		public double Chakra = 0;
 		public double ChakraMax = 0;
 		public double ChakraGainRate = 0;
+		public double JutsuMastery = 0;
+		public double TaijutsuStatGain = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,6 +132,8 @@ public class NarutoblocksModVariables {
 			nbt.putDouble("Chakra", Chakra);
 			nbt.putDouble("ChakraMax", ChakraMax);
 			nbt.putDouble("ChakraGainRate", ChakraGainRate);
+			nbt.putDouble("JutsuMastery", JutsuMastery);
+			nbt.putDouble("TaijutsuStatGain", TaijutsuStatGain);
 			return nbt;
 		}
 
@@ -139,6 +145,8 @@ public class NarutoblocksModVariables {
 			Chakra = nbt.getDouble("Chakra");
 			ChakraMax = nbt.getDouble("ChakraMax");
 			ChakraGainRate = nbt.getDouble("ChakraGainRate");
+			JutsuMastery = nbt.getDouble("JutsuMastery");
+			TaijutsuStatGain = nbt.getDouble("TaijutsuStatGain");
 		}
 	}
 
@@ -169,6 +177,8 @@ public class NarutoblocksModVariables {
 					variables.Chakra = message.data.Chakra;
 					variables.ChakraMax = message.data.ChakraMax;
 					variables.ChakraGainRate = message.data.ChakraGainRate;
+					variables.JutsuMastery = message.data.JutsuMastery;
+					variables.TaijutsuStatGain = message.data.TaijutsuStatGain;
 				}
 			});
 			context.setPacketHandled(true);
