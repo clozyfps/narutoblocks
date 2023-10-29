@@ -1,0 +1,129 @@
+{
+  "mod_elements": [
+    {
+      "name": "Testing",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/narutoblocks/models/item/testing.json",
+          "src/main/java/net/mcreator/narutoblocks/item/TestingItem.java"
+        ]
+      },
+      "path": "~/Items"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.narutoblocks.testing": "Testing"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Misc",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Gui",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Ranged",
+        "children": []
+      },
+      {
+        "name": "Jutsu",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Recipe",
+        "children": []
+      },
+      {
+        "name": "Block",
+        "children": []
+      },
+      {
+        "name": "Command",
+        "children": []
+      },
+      {
+        "name": "Biome",
+        "children": []
+      },
+      {
+        "name": "Dimension",
+        "children": []
+      },
+      {
+        "name": "Structure",
+        "children": []
+      },
+      {
+        "name": "Creative Tab",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Gamerule",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "narutoblocks",
+    "modName": "narutoblocks",
+    "version": "1.0.0",
+    "author": "jayso, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "modElementsPackage": "net.mcreator.narutoblocks",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300336712
+}
