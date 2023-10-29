@@ -13,12 +13,27 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "TrainingLog",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "training_log",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/client/renderer/TrainingLogRenderer.java",
+          "src/main/java/net/mcreator/narutoblocks/entity/TrainingLogEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "entity.narutoblocks.training_log": "Training Log",
       "item.narutoblocks.testing": "Testing"
     }
   },
@@ -43,7 +58,7 @@
         "children": []
       },
       {
-        "name": "Gui",
+        "name": "GUI",
         "children": []
       },
       {

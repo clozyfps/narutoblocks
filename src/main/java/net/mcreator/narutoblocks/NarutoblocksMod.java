@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.narutoblocks.init.NarutoblocksModItems;
+import net.mcreator.narutoblocks.init.NarutoblocksModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,6 +52,7 @@ public class NarutoblocksMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		NarutoblocksModItems.REGISTRY.register(bus);
+		NarutoblocksModEntities.REGISTRY.register(bus);
 
 	}
 
