@@ -22,10 +22,8 @@ import net.mcreator.narutoblocks.NarutoblocksMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class NarutoblocksModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, NarutoblocksMod.MODID);
-	public static final RegistryObject<EntityType<TrainingLogEntity>> TRAINING_LOG = register("training_log",
-			EntityType.Builder.<TrainingLogEntity>of(TrainingLogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrainingLogEntity::new)
-
-					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TrainingLogEntity>> TRAINING_LOG = register("training_log", EntityType.Builder.<TrainingLogEntity>of(TrainingLogEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrainingLogEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -1,22 +1,11 @@
 
 package net.mcreator.narutoblocks.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.mcreator.narutoblocks.procedures.HandsignTwoPressedProcedure;
 import net.mcreator.narutoblocks.NarutoblocksMod;
-
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class HandsignTwoBindMessage {
+
 	int type, pressedms;
 
 	public HandsignTwoBindMessage(int type, int pressedms) {
@@ -47,17 +36,21 @@ public class HandsignTwoBindMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
+
 		if (type == 0) {
 
 			HandsignTwoPressedProcedure.execute(entity);
 		}
+
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		NarutoblocksMod.addNetworkMessage(HandsignTwoBindMessage.class, HandsignTwoBindMessage::buffer, HandsignTwoBindMessage::new, HandsignTwoBindMessage::handler);
 	}
+
 }

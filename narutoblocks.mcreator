@@ -29,29 +29,15 @@
       "path": "~/Mobs"
     },
     {
-      "name": "MainHUD",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_hud",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/client/screens/MainHUDOverlay.java"
-        ]
-      },
-      "path": "~/Overlays"
-    },
-    {
-      "name": "DisplayCombo",
+      "name": "HandsignHandler",
       "type": "procedure",
-      "sortid": 5,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "display_combo",
+      "registry_name": "handsign_handler",
       "metadata": {
-        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/narutoblocks/procedures/DisplayComboProcedure.java"
+          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignHandlerProcedure.java"
         ],
         "dependencies": [
           {
@@ -60,49 +46,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Values"
-    },
-    {
-      "name": "HandsignOneBind",
-      "type": "keybind",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "handsign_one_bind",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/network/HandsignOneBindMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "HandsignTwoBind",
-      "type": "keybind",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "handsign_two_bind",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/network/HandsignTwoBindMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "HandsignThreeBind",
-      "type": "keybind",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "handsign_three_bind",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/network/HandsignThreeBindMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
+      "path": "~/Procedures"
     },
     {
       "name": "HandsignOnePressed",
@@ -114,46 +58,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/HandsignOnePressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
-      "name": "HandsignTwoPressed",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "handsign_two_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignTwoPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
-      "name": "HandsignThreePressed",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "handsign_three_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignThreePressedProcedure.java"
         ],
         "dependencies": [
           {
@@ -185,45 +89,82 @@
       "path": "~/Keybinds/Procedures"
     },
     {
-      "name": "HandsignHandler",
+      "name": "DisplayCombo",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "handsign_handler",
+      "registry_name": "display_combo",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignHandlerProcedure.java"
+          "src/main/java/net/mcreator/narutoblocks/procedures/DisplayComboProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "DisplayDragon",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_dragon",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/narutoblocks/procedures/DisplayDragonProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Overlays/Values"
+    },
+    {
+      "name": "HandsignOneBind",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsign_one_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/network/HandsignOneBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "HandsignThreeBind",
+      "type": "keybind",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsign_three_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/network/HandsignThreeBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "HandsignTwoPressed",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsign_two_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignTwoPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "HandsignTwoBind",
+      "type": "keybind",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsign_two_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/network/HandsignTwoBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
     },
     {
       "name": "DisplaySnake",
@@ -237,6 +178,21 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplaySnakeProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Values"
+    },
+    {
+      "name": "HandsignThreePressed",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "handsign_three_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/HandsignThreePressedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -244,7 +200,36 @@
           }
         ]
       },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "DisplayDragon",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_dragon",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/DisplayDragonProcedure.java"
+        ],
+        "dependencies": []
+      },
       "path": "~/Overlays/Values"
+    },
+    {
+      "name": "MainHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/client/screens/MainHUDOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
     },
     {
       "name": "DisplayOx",
@@ -258,17 +243,85 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplayOxProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Values"
+    },
+    {
+      "name": "JutsuScroll",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jutsu_scroll",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/item/JutsuScrollItem.java",
+          "src/main/resources/assets/narutoblocks/models/item/jutsu_scroll.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TrainingLogHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "training_log_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/TrainingLogHitProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Overlays/Values"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "LogHitParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "log_hit_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/narutoblocks/particles/log_hit_particle.json",
+          "src/main/java/net/mcreator/narutoblocks/client/particle/LogHitParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Items",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "items",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tab"
     }
   ],
   "variable_elements": [
+    {
+      "name": "LastPressed",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
     {
       "name": "Combination",
       "type": "string",
@@ -276,46 +329,84 @@
       "value": ""
     },
     {
-      "name": "LastPressed",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": ""
+      "name": "Chakra",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Taijutsu",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Agility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ChakraMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ChakraGainRate",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Defense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "key.narutoblocks.handsign_two_bind": "Handsign Two",
       "key.categories.naruto": "Naruto",
       "gui.narutoblocks.main_hud.label_displaycombo": "DisplayCombo",
       "entity.narutoblocks.training_log": "Training Log",
-      "item.narutoblocks.testing": "Testing",
-      "key.narutoblocks.handsign_three_bind": "Handsign Three",
-      "key.narutoblocks.handsign_one_bind": "Handsign One"
+      "item.narutoblocks.testing": "Testing"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
+        "name": "Armor",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": []
       },
       {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Misc",
-            "children": []
-          }
-        ]
+        "name": "Block",
+        "children": []
       },
       {
-        "name": "Items",
+        "name": "Ranged",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       },
       {
         "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "Dimension",
+        "children": []
+      },
+      {
+        "name": "Items",
         "children": []
       },
       {
@@ -328,11 +419,11 @@
         ]
       },
       {
-        "name": "Armor",
+        "name": "Particles",
         "children": []
       },
       {
-        "name": "Ranged",
+        "name": "Creative Tab",
         "children": []
       },
       {
@@ -340,7 +431,33 @@
         "children": []
       },
       {
-        "name": "Particles",
+        "name": "Gamerule",
+        "children": []
+      },
+      {
+        "name": "Biome",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Misc",
+            "children": [
+              {
+                "name": "Procedure",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Structure",
+        "children": []
+      },
+      {
+        "name": "Recipe",
         "children": []
       },
       {
@@ -353,39 +470,7 @@
         ]
       },
       {
-        "name": "Recipe",
-        "children": []
-      },
-      {
-        "name": "Block",
-        "children": []
-      },
-      {
         "name": "Command",
-        "children": []
-      },
-      {
-        "name": "Biome",
-        "children": []
-      },
-      {
-        "name": "Dimension",
-        "children": []
-      },
-      {
-        "name": "Structure",
-        "children": []
-      },
-      {
-        "name": "Creative Tab",
-        "children": []
-      },
-      {
-        "name": "Tags",
-        "children": []
-      },
-      {
-        "name": "Gamerule",
         "children": []
       }
     ]

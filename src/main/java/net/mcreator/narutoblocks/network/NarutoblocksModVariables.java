@@ -66,9 +66,15 @@ public class NarutoblocksModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+			clone.Chakra = original.Chakra;
+			clone.Taijutsu = original.Taijutsu;
+			clone.Agility = original.Agility;
+			clone.ChakraMax = original.ChakraMax;
+			clone.ChakraGainRate = original.ChakraGainRate;
+			clone.Defense = original.Defense;
 			if (!event.isWasDeath()) {
-				clone.Combination = original.Combination;
 				clone.LastPressed = original.LastPressed;
+				clone.Combination = original.Combination;
 			}
 		}
 	}
@@ -104,8 +110,14 @@ public class NarutoblocksModVariables {
 	}
 
 	public static class PlayerVariables {
-		public String Combination = "";
 		public String LastPressed = "";
+		public String Combination = "";
+		public double Chakra = 0;
+		public double Taijutsu = 0;
+		public double Agility = 0;
+		public double ChakraMax = 0;
+		public double ChakraGainRate = 0;
+		public double Defense = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -114,15 +126,27 @@ public class NarutoblocksModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putString("Combination", Combination);
 			nbt.putString("LastPressed", LastPressed);
+			nbt.putString("Combination", Combination);
+			nbt.putDouble("Chakra", Chakra);
+			nbt.putDouble("Taijutsu", Taijutsu);
+			nbt.putDouble("Agility", Agility);
+			nbt.putDouble("ChakraMax", ChakraMax);
+			nbt.putDouble("ChakraGainRate", ChakraGainRate);
+			nbt.putDouble("Defense", Defense);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			Combination = nbt.getString("Combination");
 			LastPressed = nbt.getString("LastPressed");
+			Combination = nbt.getString("Combination");
+			Chakra = nbt.getDouble("Chakra");
+			Taijutsu = nbt.getDouble("Taijutsu");
+			Agility = nbt.getDouble("Agility");
+			ChakraMax = nbt.getDouble("ChakraMax");
+			ChakraGainRate = nbt.getDouble("ChakraGainRate");
+			Defense = nbt.getDouble("Defense");
 		}
 	}
 
@@ -147,8 +171,14 @@ public class NarutoblocksModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.Combination = message.data.Combination;
 					variables.LastPressed = message.data.LastPressed;
+					variables.Combination = message.data.Combination;
+					variables.Chakra = message.data.Chakra;
+					variables.Taijutsu = message.data.Taijutsu;
+					variables.Agility = message.data.Agility;
+					variables.ChakraMax = message.data.ChakraMax;
+					variables.ChakraGainRate = message.data.ChakraGainRate;
+					variables.Defense = message.data.Defense;
 				}
 			});
 			context.setPacketHandled(true);

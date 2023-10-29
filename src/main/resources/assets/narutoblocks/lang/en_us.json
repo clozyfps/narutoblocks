@@ -1,9 +1,6 @@
 {
-  "key.narutoblocks.handsign_two_bind": "Handsign Two",
   "key.categories.naruto": "Naruto",
   "gui.narutoblocks.main_hud.label_displaycombo": "DisplayCombo",
   "entity.narutoblocks.training_log": "Training Log",
-  "item.narutoblocks.testing": "Testing",
-  "key.narutoblocks.handsign_three_bind": "Handsign Three",
-  "key.narutoblocks.handsign_one_bind": "Handsign One"
+  "item.narutoblocks.testing": "Testing"
 }
