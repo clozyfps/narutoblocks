@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Handsign Two",
+    "keyBindingCategoryKey": "naruto",
+    "onKeyPressed": {
+      "name": "HandsignTwoPressed"
+    }
+  }
+}

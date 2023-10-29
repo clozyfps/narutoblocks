@@ -1,25 +1,6 @@
 package net.mcreator.narutoblocks.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.narutoblocks.network.NarutoblocksModVariables;
-import net.mcreator.narutoblocks.init.NarutoblocksModParticleTypes;
-import net.mcreator.narutoblocks.entity.TrainingLogEntity;
 
 import javax.annotation.Nullable;
 

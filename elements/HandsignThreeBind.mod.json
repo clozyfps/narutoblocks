@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Handsign Three",
+    "keyBindingCategoryKey": "naruto",
+    "onKeyPressed": {
+      "name": "HandsignThreePressed"
+    }
+  }
+}
