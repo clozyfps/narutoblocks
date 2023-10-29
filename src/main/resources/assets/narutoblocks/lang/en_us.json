@@ -1,4 +1,6 @@
 {
   "entity.narutoblocks.training_log": "Training Log",
-  "item.narutoblocks.testing": "Testing"
+  "item.narutoblocks.testing": "Testing",
+  "itemGroup.tabitems": "Items",
+  "item.narutoblocks.jutsu_scroll": "Jutsu Scroll"
 }

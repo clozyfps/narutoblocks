@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "narutoblocks:items/a2i22e_layer_2"
+  }
+}

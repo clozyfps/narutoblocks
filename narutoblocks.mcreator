@@ -3,6 +3,7 @@
     {
       "name": "Testing",
       "type": "item",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "testing",
@@ -22,19 +23,125 @@
       "registry_name": "training_log",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/narutoblocks/client/renderer/TrainingLogRenderer.java",
-          "src/main/java/net/mcreator/narutoblocks/entity/TrainingLogEntity.java"
+          "src/main/java/net/mcreator/narutoblocks/entity/TrainingLogEntity.java",
+          "src/main/java/net/mcreator/narutoblocks/client/renderer/TrainingLogRenderer.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Misc"
+    },
+    {
+      "name": "LogHitParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "log_hit_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/narutoblocks/particles/log_hit_particle.json",
+          "src/main/java/net/mcreator/narutoblocks/client/particle/LogHitParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "TrainingLogHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "training_log_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/TrainingLogHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "JutsuScroll",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jutsu_scroll",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/narutoblocks/models/item/jutsu_scroll.json",
+          "src/main/java/net/mcreator/narutoblocks/item/JutsuScrollItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Items",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "items",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tab"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Taijutsu",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Agility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Defense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Chakra",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ChakraMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ChakraGainRate",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "entity.narutoblocks.training_log": "Training Log",
-      "item.narutoblocks.testing": "Testing"
+      "item.narutoblocks.testing": "Testing",
+      "itemGroup.tabitems": "Items",
+      "item.narutoblocks.jutsu_scroll": "Jutsu Scroll"
     }
   },
   "foldersRoot": {
@@ -49,7 +156,12 @@
         "children": [
           {
             "name": "Misc",
-            "children": []
+            "children": [
+              {
+                "name": "Procedure",
+                "children": []
+              }
+            ]
           }
         ]
       },
