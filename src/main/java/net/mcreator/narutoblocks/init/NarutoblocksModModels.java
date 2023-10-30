@@ -10,11 +10,13 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.narutoblocks.client.model.Modeltraininglog;
+import net.mcreator.narutoblocks.client.model.ModelLeafVest;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class NarutoblocksModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(ModelLeafVest.LAYER_LOCATION, ModelLeafVest::createBodyLayer);
 		event.registerLayerDefinition(Modeltraininglog.LAYER_LOCATION, Modeltraininglog::createBodyLayer);
 	}
 }

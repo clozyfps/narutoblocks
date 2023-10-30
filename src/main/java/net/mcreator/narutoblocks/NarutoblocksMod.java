@@ -30,7 +30,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.narutoblocks.init.NarutoblocksModTabs;
+import net.mcreator.narutoblocks.init.NarutoblocksModSounds;
 import net.mcreator.narutoblocks.init.NarutoblocksModParticleTypes;
+import net.mcreator.narutoblocks.init.NarutoblocksModMobEffects;
 import net.mcreator.narutoblocks.init.NarutoblocksModItems;
 import net.mcreator.narutoblocks.init.NarutoblocksModEntities;
 
@@ -52,9 +54,12 @@ public class NarutoblocksMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		NarutoblocksModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		NarutoblocksModSounds.REGISTRY.register(bus);
 
 		NarutoblocksModItems.REGISTRY.register(bus);
 		NarutoblocksModEntities.REGISTRY.register(bus);
+
+		NarutoblocksModMobEffects.REGISTRY.register(bus);
 
 		NarutoblocksModParticleTypes.REGISTRY.register(bus);
 

@@ -18,6 +18,7 @@
     {
       "name": "TrainingLog",
       "type": "livingentity",
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "training_log",
@@ -89,6 +90,7 @@
     {
       "name": "Items",
       "type": "tab",
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "items",
@@ -166,6 +168,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -197,6 +203,10 @@
           "src/main/java/net/mcreator/narutoblocks/procedures/FireBallJutsuRangedProjectileHitsBlockProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -281,6 +291,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -301,6 +327,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -321,6 +363,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -338,7 +396,12 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplayComboProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Values"
     },
@@ -385,6 +448,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -416,7 +495,12 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplaySnakeProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Values"
     },
@@ -435,6 +519,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -452,7 +552,12 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplayDragonProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Values"
     },
@@ -481,9 +586,130 @@
         "files": [
           "src/main/java/net/mcreator/narutoblocks/procedures/DisplayOxProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Values"
+    },
+    {
+      "name": "JutsuScrollRightclicked",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jutsu_scroll_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/JutsuScrollRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "FireBallJutsuProcedure",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_ball_jutsu_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/FireBallJutsuProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Jutsu"
+    },
+    {
+      "name": "AgilityIncrease",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "agility_increase",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/procedures/AgilityIncreaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Bleeding",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/potion/BleedingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion"
+    },
+    {
+      "name": "LeafNinjaOutfit",
+      "type": "armor",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leaf_ninja_outfit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/item/LeafNinjaOutfitItem.java",
+          "src/main/resources/assets/narutoblocks/models/item/leaf_ninja_outfit_chestplate.json",
+          "src/main/resources/assets/narutoblocks/models/item/leaf_ninja_outfit_leggings.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "LeafHeadband",
+      "type": "armor",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leaf_headband",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/narutoblocks/item/LeafHeadbandItem.java",
+          "src/main/resources/assets/narutoblocks/models/item/leaf_headband_helmet.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Armor",
+      "type": "tab",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tab"
     }
   ],
   "variable_elements": [
@@ -546,15 +772,72 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": ""
+    },
+    {
+      "name": "movelist",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "AgilityStatGain",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DefenseStatGain",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "handsign",
+      "files": [
+        "handsign"
+      ],
+      "category": "neutral",
+      "subtitle": "Hand Sign"
+    },
+    {
+      "name": "jutsu",
+      "files": [
+        "jutsu"
+      ],
+      "category": "neutral",
+      "subtitle": "Jutsu Activation"
+    },
+    {
+      "name": "poof",
+      "files": [
+        "shadowclone"
+      ],
+      "category": "neutral",
+      "subtitle": "Poof"
+    }
+  ],
   "language_map": {
     "en_us": {
-      "key.categories.naruto": "Naruto",
+      "key.narutoblocks.handsign_two_bind": "Handsign Two",
+      "subtitles.handsign": "Hand Sign",
+      "item.narutoblocks.fire_ball_jutsu_ranged": "Fire Ball Jutsu Ranged",
       "gui.narutoblocks.main_hud.label_displaycombo": "DisplayCombo",
+      "itemGroup.tabarmor": "Armor",
+      "item.narutoblocks.testing": "Testing",
+      "item.narutoblocks.leaf_headband_helmet": "Leaf Headband ",
+      "key.narutoblocks.handsign_three_bind": "Handsign Three",
+      "key.narutoblocks.handsign_one_bind": "Handsign One",
+      "subtitles.jutsu": "Jutsu Activation",
+      "item.narutoblocks.leaf_ninja_outfit_chestplate": "Leaf Ninja Vest",
+      "effect.narutoblocks.bleeding": "Bleeding",
+      "key.categories.naruto": "Naruto",
       "entity.narutoblocks.training_log": "Training Log",
-      "item.narutoblocks.testing": "Testing"
+      "item.narutoblocks.leaf_ninja_outfit_leggings": "Leaf Ninja Pants",
+      "itemGroup.tabitems": "Items",
+      "item.narutoblocks.jutsu_scroll": "Jutsu Scroll",
+      "subtitles.poof": "Poof"
     }
   },
   "foldersRoot": {
@@ -595,7 +878,12 @@
       },
       {
         "name": "Items",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Overlays",
@@ -665,6 +953,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Potion",
+        "children": []
       }
     ]
   },

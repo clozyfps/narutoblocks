@@ -74,6 +74,9 @@ public class NarutoblocksModVariables {
 			clone.ChakraGainRate = original.ChakraGainRate;
 			clone.JutsuMastery = original.JutsuMastery;
 			clone.TaijutsuStatGain = original.TaijutsuStatGain;
+			clone.movelist = original.movelist;
+			clone.AgilityStatGain = original.AgilityStatGain;
+			clone.DefenseStatGain = original.DefenseStatGain;
 			if (!event.isWasDeath()) {
 				clone.LastPressed = original.LastPressed;
 				clone.Combination = original.Combination;
@@ -122,6 +125,9 @@ public class NarutoblocksModVariables {
 		public double TaijutsuStatGain = 0;
 		public String LastPressed = "";
 		public String Combination = "";
+		public String movelist = "\"\"";
+		public double AgilityStatGain = 0;
+		public double DefenseStatGain = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -140,6 +146,9 @@ public class NarutoblocksModVariables {
 			nbt.putDouble("TaijutsuStatGain", TaijutsuStatGain);
 			nbt.putString("LastPressed", LastPressed);
 			nbt.putString("Combination", Combination);
+			nbt.putString("movelist", movelist);
+			nbt.putDouble("AgilityStatGain", AgilityStatGain);
+			nbt.putDouble("DefenseStatGain", DefenseStatGain);
 			return nbt;
 		}
 
@@ -155,6 +164,9 @@ public class NarutoblocksModVariables {
 			TaijutsuStatGain = nbt.getDouble("TaijutsuStatGain");
 			LastPressed = nbt.getString("LastPressed");
 			Combination = nbt.getString("Combination");
+			movelist = nbt.getString("movelist");
+			AgilityStatGain = nbt.getDouble("AgilityStatGain");
+			DefenseStatGain = nbt.getDouble("DefenseStatGain");
 		}
 	}
 
@@ -189,6 +201,9 @@ public class NarutoblocksModVariables {
 					variables.TaijutsuStatGain = message.data.TaijutsuStatGain;
 					variables.LastPressed = message.data.LastPressed;
 					variables.Combination = message.data.Combination;
+					variables.movelist = message.data.movelist;
+					variables.AgilityStatGain = message.data.AgilityStatGain;
+					variables.DefenseStatGain = message.data.DefenseStatGain;
 				}
 			});
 			context.setPacketHandled(true);

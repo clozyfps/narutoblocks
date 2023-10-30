@@ -1,6 +1,20 @@
 {
-  "key.categories.naruto": "Naruto",
+  "key.narutoblocks.handsign_two_bind": "Handsign Two",
+  "subtitles.handsign": "Hand Sign",
+  "item.narutoblocks.fire_ball_jutsu_ranged": "Fire Ball Jutsu Ranged",
   "gui.narutoblocks.main_hud.label_displaycombo": "DisplayCombo",
+  "itemGroup.tabarmor": "Armor",
+  "item.narutoblocks.testing": "Testing",
+  "item.narutoblocks.leaf_headband_helmet": "Leaf Headband ",
+  "key.narutoblocks.handsign_three_bind": "Handsign Three",
+  "key.narutoblocks.handsign_one_bind": "Handsign One",
+  "subtitles.jutsu": "Jutsu Activation",
+  "item.narutoblocks.leaf_ninja_outfit_chestplate": "Leaf Ninja Vest",
+  "effect.narutoblocks.bleeding": "Bleeding",
+  "key.categories.naruto": "Naruto",
   "entity.narutoblocks.training_log": "Training Log",
-  "item.narutoblocks.testing": "Testing"
+  "item.narutoblocks.leaf_ninja_outfit_leggings": "Leaf Ninja Pants",
+  "itemGroup.tabitems": "Items",
+  "item.narutoblocks.jutsu_scroll": "Jutsu Scroll",
+  "subtitles.poof": "Poof"
 }

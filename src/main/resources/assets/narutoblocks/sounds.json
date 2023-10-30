@@ -1,0 +1,29 @@
+{
+  "handsign": {
+    "subtitle": "subtitles.handsign",
+    "sounds": [
+      {
+        "name": "narutoblocks:handsign",
+        "stream": false
+      }
+    ]
+  },
+  "jutsu": {
+    "subtitle": "subtitles.jutsu",
+    "sounds": [
+      {
+        "name": "narutoblocks:jutsu",
+        "stream": false
+      }
+    ]
+  },
+  "poof": {
+    "subtitle": "subtitles.poof",
+    "sounds": [
+      {
+        "name": "narutoblocks:shadowclone",
+        "stream": false
+      }
+    ]
+  }
+}
